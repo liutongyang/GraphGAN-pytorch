@@ -131,3 +131,19 @@ def generate_neg_links(train_filename, test_filename, test_neg_filename):
 def softmax(x):
     e_x = np.exp(x - np.max(x))  # for computation stability
     return e_x / e_x.sum()
+
+def clip_by_tensor(t,t_min,t_max):
+        """
+        clip_by_tensor
+        :param t: tensor
+        :param t_min: min
+        :param t_max: max
+        :return: cliped tensor
+        """
+        t=t.float()
+        # t_min=t_min.float()
+        # t_max=t_max.float()
+    
+        result = (t >= t_min).float() * t + (t < t_min).float() * t_min
+        result = (result <= t_max).float() * result + (result > t_max).float() * t_max
+        return result
