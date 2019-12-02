@@ -63,6 +63,8 @@ def read_embeddings(filename, n_node, n_embed):
         embedding_matrix = np.random.rand(n_node, n_embed)
         for line in lines:
             emd = line.split()
+            
+            # 把预训练的词向量替换到对应的位置，没有的就使用随机生成的，这样可以简单解决未登录词的问题
             embedding_matrix[int(emd[0]), :] = str_list_to_float(emd[1:])
         return embedding_matrix
 

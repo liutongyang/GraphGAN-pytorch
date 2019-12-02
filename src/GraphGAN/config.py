@@ -39,3 +39,4 @@ emb_filenames = ["../../results/" + app + "/" + dataset + "_gen_.emb",
 result_filename = "../../results/" + app + "/" + dataset + ".txt"
 cache_filename = "../../cache/" + dataset + ".pkl"
 model_log = "../../log/"
+PATH = './checkpoint.path'
