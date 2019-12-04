@@ -121,7 +121,7 @@ class GraphGAN(object):
                     # TODO：L2正则化
                     # node_neighbor_embedding = self.discriminator
                     # node_embedding = pass
-                    # bias = pass
+                    # bias = passe
 
                     # loss = torch.nn.MultiLabelSoftMarginLoss(self.discriminator.score, np.array(labels[start:end])).sum(0) + \
                     #        config.lambda_dis * (
